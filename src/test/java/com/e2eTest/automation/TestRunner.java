@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = { "src/spec/features" },
 //glue= {},
 plugin = { "pretty", "html:target/cucumber-html-report", "json:target/cucumber.json" }, tags = {
-"@cnx" }, snippets = SnippetType.CAMELCASE, monochrome = true)
+"@tag" }, snippets = SnippetType.CAMELCASE, monochrome = true)
 public class TestRunner {
 
 }
