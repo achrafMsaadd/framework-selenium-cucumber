@@ -46,4 +46,10 @@ public class AuthentificationPage {
 		btnLogin.click();
 	}
 
+
+	public static void sendPassword(String pwd) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -15,8 +15,9 @@ import cucumber.api.java.en.When;
 public class AuthentificationStepDefinition extends CommonMethods  {
 	
     public WebDriver driver ;
-    private AuthentificationPage authentificationpage = new AuthentificationPage(driver) ;
+    private AuthentificationPage authentificationPage = new AuthentificationPage(driver) ;
     public CommonMethods commonMethods= new CommonMethods();
+    
     public AuthentificationStepDefinition() {
     	//driver ligne 16 houwa driver mte3 setup sychro entre les drivers //
     	driver= Setup.driver;
@@ -32,28 +33,26 @@ public class AuthentificationStepDefinition extends CommonMethods  {
 	public void jeSaisieUserName() throws Throwable {
 		//Initiate Elements  
 		PageFactory.initElements(driver, AuthentificationPage.class);
-		authentificationpage.sendUserName();
+		authentificationPage.sendUserName();
 		 logger.info("Je saisie userName");
 	}
 
 	@When("^Je saisie le mot de passe$")
 	public void jeSaisieLeMotDePasse() throws Throwable {
-		authentificationpage.sendUserPassword();
+		authentificationPage.sendUserPassword();
 		logger.info("Je saisie le mot de passe");
 	}
 
 	@When("^Je clique sur le bouton login$")
 	public void jeCliqueSurLeBoutonLogin() throws Throwable {
-		authentificationpage.clickLoginButton();
+		authentificationPage.clickLoginButton();
 		logger.info("Je clique sur le bouton login");
 
 	}
 
 	@Then("^redirection vers la page home$")
 	public void redirectionVersLaPageHome() throws Throwable {
-		String welcome = authentificationpage.welcome.getText();
+		String welcome = AuthentificationPage.welcome.getText();
 		Assert.assertTrue(welcome.contains("Welcome"));
-
 	}
-
 }
