@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "line": 5,
+        "line": 4,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3409867400,
+              "duration": 5579483600,
               "status": "passed"
             },
-            "line": 6,
+            "line": 5,
             "name": "Je ouvre l application orangeHRM",
             "match": {
               "location": "AuthentificationStepDefinition.jeOuvreLApplicationOrangeHRM()"
@@ -23,10 +23,10 @@
           },
           {
             "result": {
-              "duration": 61676800,
+              "duration": 59503100,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "Je saisie le nom de l\u0027utilisateur \"Admin\"",
             "match": {
               "arguments": [
@@ -41,10 +41,10 @@
           },
           {
             "result": {
-              "duration": 56830700,
+              "duration": 50660900,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "Je saisie le mot de passe \"admin123\"",
             "match": {
               "arguments": [
@@ -59,10 +59,10 @@
           },
           {
             "result": {
-              "duration": 3891884800,
+              "duration": 3257383700,
               "status": "passed"
             },
-            "line": 9,
+            "line": 8,
             "name": "Je clique sur le bouton login",
             "match": {
               "location": "AuthentificationStepDefinition.jeCliqueSurLeBoutonLogin()"
@@ -71,10 +71,10 @@
           },
           {
             "result": {
-              "duration": 32734000,
+              "duration": 3078017700,
               "status": "passed"
             },
-            "line": 10,
+            "line": 9,
             "name": "redirection vers la page home",
             "match": {
               "location": "AuthentificationStepDefinition.redirectionVersLaPageHome()"
@@ -87,7 +87,7 @@
         "before": [
           {
             "result": {
-              "duration": 8630976800,
+              "duration": 8533068200,
               "status": "passed"
             },
             "match": {
@@ -95,14 +95,14 @@
             }
           }
         ],
-        "line": 13,
-        "name": "Clique - Buzz",
+        "line": 21,
+        "name": "Creation Admin - OrangeHRM",
         "description": "",
-        "id": "authentication--param--orangehrm;clique---buzz",
+        "id": "admin---orangehrm;creation-admin---orangehrm;;2",
         "after": [
           {
             "result": {
-              "duration": 1385018300,
+              "duration": 1540186300,
               "status": "passed"
             },
             "match": {
@@ -111,169 +111,122 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3937056800,
+              "duration": 1740870200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "je clique sur le module Admin",
+            "match": {
+              "location": "AdminStepsDefinition.jeCliqueSurLeModuleAdmin()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2021432800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "je clique sur le bouton Add",
+            "match": {
+              "location": "AdminStepsDefinition.jeCliqueSurLeBoutonAdd()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94706900,
               "status": "passed"
             },
             "line": 14,
-            "name": "Je clique sur le module Buzz",
-            "match": {
-              "location": "AuthentifcationParamStepDefinition.jeCliqueSurLeModuleBuzz()"
-            },
-            "keyword": "When "
-          }
-        ],
-        "tags": [
-          {
-            "line": 12,
-            "name": "@test"
-          }
-        ]
-      },
-      {
-        "line": 5,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 3141966600,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Je ouvre l application orangeHRM",
-            "match": {
-              "location": "AuthentificationStepDefinition.jeOuvreLApplicationOrangeHRM()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 58412300,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Je saisie le nom de l\u0027utilisateur \"Admin\"",
+            "name": "je saisie nom employee \"\u003cnamemployer\u003e\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Admin",
-                  "offset": 35
+                  "val": "\u003cnamemployer\u003e",
+                  "offset": 24
                 }
               ],
-              "location": "AuthentifcationParamStepDefinition.jeSaisieLeNomDeLUtilisateur(String)"
+              "location": "AdminStepsDefinition.jeSaisieNomEmployee(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 69645100,
+              "duration": 79862800,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Je saisie le mot de passe \"admin123\"",
+            "line": 15,
+            "name": "je saisie mon mot de passe \"alice1234\"",
             "match": {
               "arguments": [
                 {
-                  "val": "admin123",
-                  "offset": 27
+                  "val": "alice1234",
+                  "offset": 28
                 }
               ],
-              "location": "AuthentifcationParamStepDefinition.jeSaisieLeMotDePasse(String)"
+              "location": "AdminStepsDefinition.jeSaisieMonMotDePasse(String)"
             },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 4308574100,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "Je clique sur le bouton login",
-            "match": {
-              "location": "AuthentificationStepDefinition.jeCliqueSurLeBoutonLogin()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 29040600,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "redirection vers la page home",
-            "match": {
-              "location": "AuthentificationStepDefinition.redirectionVersLaPageHome()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 8189412600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Setup.setup()"
-            }
-          }
-        ],
-        "line": 17,
-        "name": "Clique - Temps",
-        "description": "",
-        "id": "authentication--param--orangehrm;clique---temps",
-        "after": [
-          {
-            "result": {
-              "duration": 1299513100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Setup.enbedScreenshot(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1320021000,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "Je clique sur le module Temps",
-            "match": {
-              "location": "AuthentifcationParamStepDefinition.jeCliqueSurLeModuleTemps()"
-            },
+            "matchedColumns": [
+              1
+            ],
             "keyword": "When "
-          }
-        ],
-        "tags": [
+          },
           {
+            "result": {
+              "duration": 58425800,
+              "status": "passed"
+            },
             "line": 16,
-            "name": "@test"
+            "name": "je saisie confirme mot de passe \"alice1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "alice1234",
+                  "offset": 33
+                }
+              ],
+              "location": "AdminStepsDefinition.jeSaisieConfirmeMotDePasse(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 44234500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "je clique sur le bouton Save",
+            "match": {
+              "location": "AdminStepsDefinition.jeCliqueSurLeBoutonSave()"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@admin"
           }
         ]
       }
     ],
-    "name": "Authentication -param -OrangeHRM",
-    "description": "As a user i want to authenticate",
-    "id": "authentication--param--orangehrm",
+    "name": "Admin - OrangeHRM",
+    "description": "En tant que utilisateur je souhaite verifier le module Admin",
+    "id": "admin---orangehrm",
     "keyword": "Feature",
-    "uri": "authentificationParam/AuthentificationParam.feature",
+    "uri": "admin/Admin.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@test"
+        "name": "@admin"
       }
     ]
   }
