@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = { "src/spec/features" },
 //glue= {},
 plugin = { "pretty", "html:target/cucumber-html-report", "json:target/cucumber.json", "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/orangeHRM-report.html" }, tags = {
-"@admin" }, snippets = SnippetType.CAMELCASE, monochrome = true)
+"@testlocation" }, snippets = SnippetType.CAMELCASE, monochrome = true)
 public class TestRunner {
 	@AfterClass
  public static void writeExtentReport () {

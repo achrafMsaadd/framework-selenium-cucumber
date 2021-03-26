@@ -1,4 +1,4 @@
-@admin
+@admin1
 Feature: Admin - OrangeHRM
   En tant que utilisateur je souhaite verifier le module Admin
   Background:
@@ -15,9 +15,22 @@ Feature: Admin - OrangeHRM
     When je saisie mon mot de passe "<password>"
     When je saisie confirme mot de passe "<confirmPassword>" 
     When je clique sur le bouton Save
-   # Then je verifie le nom Admin ajoute
+    Then je verifie le nom Admin ajoute "<nameAdmin1>"
       Examples: 
-      | nameEmployer |  password | confirmPassword|
-      | Alice Duval  | alice1234| alice1234 |
+      | namemployer |  password | confirmPassword| nameAdmin1|
+      | Alice Duval  | achraf1234| Achraf1234 | Alice Duval |
       #| mariem   | aliali |aliali|
+    
+    
+    @admin1 @must
+   Scenario Outline: Creation jobAdmin - OrangeHRM
+  When je clique sur le module Admin 
+	When je clique sur le module Adminjob 
+	When je clique sur le bouton Add job 
+	And je saisie job title "<title>" description "<description>" et notes "<notes>" 
+   # And je importe le fichier job specification avec le chemin suivant "<path1>"
+   # And je clique sur le bouton ajouter 
+    Examples: 
+      |  title| description  |notes  |path1 |
+      |test   |  test          |test   |src/test/resources/temp/im1.jpg|
     
